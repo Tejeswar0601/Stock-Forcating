@@ -1,167 +1,166 @@
 {
   "ticker": "AAPL",
-  "generated_at_utc": "2026-06-21T09:40:39.942543+00:00",
-  "last_known_date": "2026-06-20",
-  "last_known_price": 205.0,
-  "test_mae_return": 0.0,
+  "generated_at_utc": "2026-06-21T10:54:31.832279+00:00",
+  "last_known_date": "2026-06-18",
+  "last_known_price": 298.01,
+  "test_mae_return": 0.04981,
   "forecast": [
     {
-      "date": "2026-06-22",
+      "date": "2026-06-19",
       "day": 1,
-      "predicted_price": 205.2,
-      "predicted_return_pct": 0.1,
-      "change_from_last_pct": 0.1
+      "predicted_price": 297.61,
+      "predicted_return_pct": -0.136,
+      "change_from_last_pct": -0.14
+    },
+    {
+      "date": "2026-06-22",
+      "day": 2,
+      "predicted_price": 297.66,
+      "predicted_return_pct": 0.019,
+      "change_from_last_pct": -0.12
     },
     {
       "date": "2026-06-23",
-      "day": 2,
-      "predicted_price": 205.41,
-      "predicted_return_pct": 0.1,
-      "change_from_last_pct": 0.2
+      "day": 3,
+      "predicted_price": 297.17,
+      "predicted_return_pct": -0.166,
+      "change_from_last_pct": -0.28
     },
     {
       "date": "2026-06-24",
-      "day": 3,
-      "predicted_price": 205.62,
-      "predicted_return_pct": 0.1,
-      "change_from_last_pct": 0.3
+      "day": 4,
+      "predicted_price": 297.31,
+      "predicted_return_pct": 0.049,
+      "change_from_last_pct": -0.23
     },
     {
       "date": "2026-06-25",
-      "day": 4,
-      "predicted_price": 205.82,
-      "predicted_return_pct": 0.1,
-      "change_from_last_pct": 0.4
-    },
-    {
-      "date": "2026-06-26",
       "day": 5,
-      "predicted_price": 206.03,
-      "predicted_return_pct": 0.1,
-      "change_from_last_pct": 0.5
+      "predicted_price": 297.27,
+      "predicted_return_pct": -0.016,
+      "change_from_last_pct": -0.25
     }
   ],
   "recent_history": [
     {
+      "date": "2026-05-07",
+      "close": 287.18
+    },
+    {
+      "date": "2026-05-08",
+      "close": 293.05
+    },
+    {
+      "date": "2026-05-11",
+      "close": 292.68
+    },
+    {
+      "date": "2026-05-12",
+      "close": 294.8
+    },
+    {
+      "date": "2026-05-13",
+      "close": 298.87
+    },
+    {
+      "date": "2026-05-14",
+      "close": 298.21
+    },
+    {
+      "date": "2026-05-15",
+      "close": 300.23
+    },
+    {
+      "date": "2026-05-18",
+      "close": 297.84
+    },
+    {
+      "date": "2026-05-19",
+      "close": 298.97
+    },
+    {
+      "date": "2026-05-20",
+      "close": 302.25
+    },
+    {
+      "date": "2026-05-21",
+      "close": 304.99
+    },
+    {
       "date": "2026-05-22",
-      "close": 205.0
-    },
-    {
-      "date": "2026-05-23",
-      "close": 205.1
-    },
-    {
-      "date": "2026-05-24",
-      "close": 205.2
-    },
-    {
-      "date": "2026-05-25",
-      "close": 205.31
+      "close": 308.82
     },
     {
       "date": "2026-05-26",
-      "close": 205.41
+      "close": 308.33
     },
     {
       "date": "2026-05-27",
-      "close": 205.51
+      "close": 310.85
     },
     {
       "date": "2026-05-28",
-      "close": 205.61
+      "close": 312.51
     },
     {
       "date": "2026-05-29",
-      "close": 205.72
-    },
-    {
-      "date": "2026-05-30",
-      "close": 205.82
-    },
-    {
-      "date": "2026-05-31",
-      "close": 205.92
+      "close": 312.06
     },
     {
       "date": "2026-06-01",
-      "close": 206.02
+      "close": 306.31
     },
     {
       "date": "2026-06-02",
-      "close": 206.13
+      "close": 315.2
     },
     {
       "date": "2026-06-03",
-      "close": 206.23
+      "close": 310.26
     },
     {
       "date": "2026-06-04",
-      "close": 206.33
+      "close": 311.23
     },
     {
       "date": "2026-06-05",
-      "close": 206.43
-    },
-    {
-      "date": "2026-06-06",
-      "close": 206.54
-    },
-    {
-      "date": "2026-06-07",
-      "close": 206.64
+      "close": 307.34
     },
     {
       "date": "2026-06-08",
-      "close": 206.74
+      "close": 301.54
     },
     {
       "date": "2026-06-09",
-      "close": 206.84
+      "close": 290.55
     },
     {
       "date": "2026-06-10",
-      "close": 206.95
+      "close": 291.58
     },
     {
       "date": "2026-06-11",
-      "close": 207.05
+      "close": 295.63
     },
     {
       "date": "2026-06-12",
-      "close": 207.15
-    },
-    {
-      "date": "2026-06-13",
-      "close": 207.25
-    },
-    {
-      "date": "2026-06-14",
-      "close": 207.36
+      "close": 291.13
     },
     {
       "date": "2026-06-15",
-      "close": 207.46
+      "close": 296.42
     },
     {
       "date": "2026-06-16",
-      "close": 207.56
+      "close": 299.24
     },
     {
       "date": "2026-06-17",
-      "close": 207.66
+      "close": 295.95
     },
     {
       "date": "2026-06-18",
-      "close": 207.77
-    },
-    {
-      "date": "2026-06-19",
-      "close": 207.87
-    },
-    {
-      "date": "2026-06-20",
-      "close": 207.97
+      "close": 298.01
     }
-  ],
-  "placeholder": true
+  ]
 }
