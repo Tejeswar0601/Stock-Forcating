@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Forecast Terminal</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+  :root {
+    --bg: #0b0e0d;
+    --panel: #121614;
+    --panel-line: #232a26;
+    --ink: #e9efe9;
+    --ink-dim: #8a9890;
+    --up: #5fd98a;
+    --down: #ef6b5e;
+    --amber: #e8b14f;
+    --mono: 'JetBrains Mono', monospace;
+    --display: 'Space Grotesk', sans-serif;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--display);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background-image: linear-gradient(var(--panel-line) 1px, transparent 1px);
+    background-size: 100% 42px;
+    opacity: 0.18;
+    z-index: 0;
+  }
+
+  .wrap {
+    position: relative;
+    z-index: 1;
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 28px 20px 80px;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-bottom: 1px solid var(--panel-line);
+    padding-bottom: 18px;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .brand {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+  }
+
+  .brand-dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: var(--up);
+    display: inline-block;
+    box-shadow: 0 0 8px var(--up);
+    animation: pulse 2.4s ease-in-out infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.35; }
+  }
+
+  h1 {
+    font-size: 19px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    margin: 0;
+  }
+
+  .asof {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--ink-dim);
+    text-align: right;
+    line-height: 1.5;
+  }
+
+  .ticker-row {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 22px;
+    flex-wrap: wrap;
+  }
+
+  .ticker-btn {
+    font-family: var(--mono);
+    font-size: 13px;
+    font-weight: 600;
+    background: transparent;
+    color: var(--ink-dim);
+    border: 1px solid var(--panel-line);
+    padding: 8px 16px;
+    border-radius: 3px;
+    cursor: pointer;
+    letter-spacing: 0.04em;
+    transition: border-color 0.15s, color 0.15s, background 0.15s;
+  }
+
+  .ticker-btn:hover { border-color: var(--ink-dim); color: var(--ink); }
+
+  .ticker-btn.active {
+    color: var(--bg);
+    background: var(--amber);
+    border-color: var(--amber);
+  }
+
+  .ticker-btn:focus-visible { outline: 2px solid var(--amber); outline-offset: 2px; }
+
+  #panel { min-height: 320px; }
+
+  .loading, .error {
+    font-family: var(--mono);
+    color: var(--ink-dim);
+    padding: 60px 0;
+    text-align: center;
+    font-size: 13px;
+  }
+
+  .error { color: var(--down); }
+
+  .price-block {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    margin-bottom: 4px;
+    flex-wrap: wrap;
+  }
+
+  .price-block .ticker-name {
+    font-size: 15px;
+    color: var(--ink-dim);
+    font-family: var(--mono);
+    letter-spacing: 0.05em;
+  }
+
+  .last-price {
+    font-family: var(--mono);
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  .as-of-date {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--ink-dim);
+    margin-bottom: 28px;
+  }
+
+  .section-label {
+    font-family: var(--mono);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--ink-dim);
+    margin: 0 0 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .section-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--panel-line);
+  }
+
+  .forecast-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1px;
+    background: var(--panel-line);
+    border: 1px solid var(--panel-line);
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 28px;
+  }
+
+  .day-cell {
+    background: var(--panel);
+    padding: 16px 10px;
+    text-align: center;
+  }
+
+  .day-cell .day-label {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--ink-dim);
+    letter-spacing: 0.08em;
+    margin-bottom: 2px;
+  }
+
+  .day-cell .day-date {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--ink-dim);
+    margin-bottom: 10px;
+  }
+
+  .day-cell .day-price {
+    font-family: var(--mono);
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+
+  .day-cell .day-change {
+    font-family: var(--mono);
+    font-size: 11px;
+    font-weight: 600;
+    padding: 2px 6px;
+    border-radius: 3px;
+    display: inline-block;
+  }
+
+  .up { color: var(--up); }
+  .down { color: var(--down); }
+  .up-bg { background: rgba(95, 217, 138, 0.12); color: var(--up); }
+  .down-bg { background: rgba(239, 107, 94, 0.12); color: var(--down); }
+
+  .chart-wrap {
+    background: var(--panel);
+    border: 1px solid var(--panel-line);
+    border-radius: 4px;
+    padding: 18px 14px 10px;
+    margin-bottom: 24px;
+  }
+
+  svg text { font-family: var(--mono); }
+
+  .meta-row {
+    display: flex;
+    gap: 24px;
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--ink-dim);
+    flex-wrap: wrap;
+  }
+
+  .meta-row b { color: var(--ink); }
+
+  footer {
+    margin-top: 36px;
+    padding-top: 18px;
+    border-top: 1px solid var(--panel-line);
+    font-family: var(--mono);
+    font-size: 10.5px;
+    color: var(--ink-dim);
+    line-height: 1.6;
+  }
+
+  @media (max-width: 600px) {
+    .forecast-grid { grid-template-columns: repeat(5, 1fr); }
+    .day-cell { padding: 10px 4px; }
+    .day-cell .day-price { font-size: 13px; }
+    .last-price { font-size: 32px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="brand">
+      <span class="brand-dot"></span>
+      <h1>FORECAST TERMINAL</h1>
+    </div>
+    <div class="asof" id="global-asof">loading run metadata…</div>
+  </header>
+
+  <div class="ticker-row" id="ticker-row"></div>
+
+  <div id="panel"><div class="loading">fetching forecast data…</div></div>
+
+  <footer>
+    Forecasts are generated daily by an LSTM model trained on each ticker's price history and
+    technical indicators. Predictions are statistical estimates only — not financial advice.
+    Model error grows with each forecast day; see test MAE below the chart.
+  </footer>
+
+</div>
+
+<script>
+const PREDICTIONS_DIR = 'predictions';
+let currentIndex = null;
+let currentTicker = null;
+
+async function fetchJSON(path) {
+  const res = await fetch(path + '?_=' + Date.now()); // cache-bust so daily updates show immediately
+  if (!res.ok) throw new Error('Not found: ' + path);
+  return res.json();
+}
+
+function fmtDate(iso) {
+  const d = new Date(iso + 'T00:00:00');
+  return d.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' });
+}
+
+function fmtRunTime(iso) {
+  const d = new Date(iso);
+  return d.toLocaleString('en-US', { dateStyle: 'medium', timeStyle: 'short' });
+}
+
+function renderTickerButtons(tickers) {
+  const row = document.getElementById('ticker-row');
+  row.innerHTML = '';
+  tickers.forEach(t => {
+    const btn = document.createElement('button');
+    btn.className = 'ticker-btn' + (t.ticker === currentTicker ? ' active' : '');
+    btn.textContent = t.ticker;
+    btn.disabled = !t.ok;
+    if (!t.ok) btn.title = 'Last run failed for this ticker';
+    btn.addEventListener('click', () => selectTicker(t.ticker));
+    row.appendChild(btn);
+  });
+}
+
+function buildSparkline(history, forecast) {
+  const w = 880, h = 180, padX = 10, padY = 20;
+  const histVals = history.map(p => p.close);
+  const fcVals = forecast.map(p => p.predicted_price);
+  const all = histVals.concat(fcVals);
+  const min = Math.min(...all), max = Math.max(...all);
+  const range = (max - min) || 1;
+
+  const totalPoints = history.length + forecast.length;
+  const stepX = (w - padX * 2) / (totalPoints - 1);
+
+  const yFor = v => h - padY - ((v - min) / range) * (h - padY * 2);
+
+  let histPath = '';
+  history.forEach((p, i) => {
+    const x = padX + i * stepX;
+    const y = yFor(p.close);
+    histPath += (i === 0 ? 'M' : 'L') + x.toFixed(1) + ',' + y.toFixed(1) + ' ';
+  });
+
+  const lastHistX = padX + (history.length - 1) * stepX;
+  const lastHistY = yFor(history[history.length - 1].close);
+  let fcPath = 'M' + lastHistX.toFixed(1) + ',' + lastHistY.toFixed(1) + ' ';
+  forecast.forEach((p, i) => {
+    const x = padX + (history.length + i) * stepX;
+    const y = yFor(p.predicted_price);
+    fcPath += 'L' + x.toFixed(1) + ',' + y.toFixed(1) + ' ';
+  });
+
+  const dividerX = lastHistX;
+
+  let dots = '';
+  forecast.forEach((p, i) => {
+    const x = padX + (history.length + i) * stepX;
+    const y = yFor(p.predicted_price);
+    dots += `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="3" fill="var(--amber)" />`;
+  });
+
+  return `
+    <svg viewBox="0 0 ${w} ${h}" width="100%" height="${h}" preserveAspectRatio="none">
+      <line x1="${dividerX}" y1="0" x2="${dividerX}" y2="${h}" stroke="#232a26" stroke-width="1" stroke-dasharray="3,3" />
+      <path d="${histPath}" fill="none" stroke="#8a9890" stroke-width="1.6" />
+      <path d="${fcPath}" fill="none" stroke="#e8b14f" stroke-width="1.8" stroke-dasharray="5,3" />
+      ${dots}
+    </svg>
+  `;
+}
+
+function renderPanel(data) {
+  const panel = document.getElementById('panel');
+  const lastPrice = data.last_known_price;
+
+  const dayCells = data.forecast.map(day => {
+    const cls = day.change_from_last_pct >= 0 ? 'up-bg' : 'down-bg';
+    const sign = day.change_from_last_pct >= 0 ? '+' : '';
+    return `
+      <div class="day-cell">
+        <div class="day-label">DAY +${day.day}</div>
+        <div class="day-date">${fmtDate(day.date)}</div>
+        <div class="day-price">$${day.predicted_price.toFixed(2)}</div>
+        <div class="day-change ${cls}">${sign}${day.change_from_last_pct.toFixed(2)}%</div>
+      </div>
+    `;
+  }).join('');
+
+  panel.innerHTML = `
+    <div class="price-block">
+      <span class="ticker-name">${data.ticker}</span>
+      <span class="last-price">$${lastPrice.toFixed(2)}</span>
+    </div>
+    <div class="as-of-date">Last known close: ${fmtDate(data.last_known_date)}</div>
+
+    <p class="section-label">Next 5 trading days</p>
+    <div class="forecast-grid">${dayCells}</div>
+
+    <p class="section-label">Recent history → forecast</p>
+    <div class="chart-wrap">
+      ${buildSparkline(data.recent_history, data.forecast)}
+    </div>
+
+    <div class="meta-row">
+      <span>Model: <b>BiLSTM + Attention</b></span>
+      <span>Test MAE (return): <b>${data.test_mae_return}</b></span>
+      <span>Run generated: <b>${fmtRunTime(data.generated_at_utc)}</b></span>
+    </div>
+  `;
+}
+
+async function selectTicker(ticker) {
+  currentTicker = ticker;
+  renderTickerButtons(currentIndex.tickers);
+  document.getElementById('panel').innerHTML = '<div class="loading">loading ' + ticker + '…</div>';
+  try {
+    const data = await fetchJSON(`${PREDICTIONS_DIR}/${ticker}.json`);
+    renderPanel(data);
+  } catch (e) {
+    document.getElementById('panel').innerHTML =
+      '<div class="error">Could not load forecast for ' + ticker + '. It may not have run yet.</div>';
+  }
+}
+
+async function init() {
+  try {
+    currentIndex = await fetchJSON(`${PREDICTIONS_DIR}/index.json`);
+    document.getElementById('global-asof').textContent =
+      'Last updated: ' + fmtRunTime(currentIndex.updated_at_utc);
+    const firstOk = currentIndex.tickers.find(t => t.ok) || currentIndex.tickers[0];
+    renderTickerButtons(currentIndex.tickers);
+    await selectTicker(firstOk.ticker);
+  } catch (e) {
+    document.getElementById('global-asof').textContent = '';
+    document.getElementById('panel').innerHTML =
+      '<div class="error">No forecast data found yet. Once the daily workflow runs once, it will appear here.</div>';
+  }
+}
+
+init();
+</script>
+</body>
+</html>

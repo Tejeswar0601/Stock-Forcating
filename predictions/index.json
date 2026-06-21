@@ -1,0 +1,17 @@
+{
+  "updated_at_utc": "2026-06-21T09:40:39.942543+00:00",
+  "tickers": [
+    {
+      "ticker": "AAPL",
+      "ok": true
+    },
+    {
+      "ticker": "TSLA",
+      "ok": true
+    },
+    {
+      "ticker": "MSFT",
+      "ok": true
+    }
+  ]
+}

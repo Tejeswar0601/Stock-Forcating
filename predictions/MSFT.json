@@ -1,0 +1,167 @@
+{
+  "ticker": "MSFT",
+  "generated_at_utc": "2026-06-21T09:40:39.942543+00:00",
+  "last_known_date": "2026-06-20",
+  "last_known_price": 460.0,
+  "test_mae_return": 0.0,
+  "forecast": [
+    {
+      "date": "2026-06-22",
+      "day": 1,
+      "predicted_price": 460.46,
+      "predicted_return_pct": 0.1,
+      "change_from_last_pct": 0.1
+    },
+    {
+      "date": "2026-06-23",
+      "day": 2,
+      "predicted_price": 460.92,
+      "predicted_return_pct": 0.1,
+      "change_from_last_pct": 0.2
+    },
+    {
+      "date": "2026-06-24",
+      "day": 3,
+      "predicted_price": 461.38,
+      "predicted_return_pct": 0.1,
+      "change_from_last_pct": 0.3
+    },
+    {
+      "date": "2026-06-25",
+      "day": 4,
+      "predicted_price": 461.84,
+      "predicted_return_pct": 0.1,
+      "change_from_last_pct": 0.4
+    },
+    {
+      "date": "2026-06-26",
+      "day": 5,
+      "predicted_price": 462.3,
+      "predicted_return_pct": 0.1,
+      "change_from_last_pct": 0.5
+    }
+  ],
+  "recent_history": [
+    {
+      "date": "2026-05-22",
+      "close": 460.0
+    },
+    {
+      "date": "2026-05-23",
+      "close": 460.23
+    },
+    {
+      "date": "2026-05-24",
+      "close": 460.46
+    },
+    {
+      "date": "2026-05-25",
+      "close": 460.69
+    },
+    {
+      "date": "2026-05-26",
+      "close": 460.92
+    },
+    {
+      "date": "2026-05-27",
+      "close": 461.15
+    },
+    {
+      "date": "2026-05-28",
+      "close": 461.38
+    },
+    {
+      "date": "2026-05-29",
+      "close": 461.61
+    },
+    {
+      "date": "2026-05-30",
+      "close": 461.84
+    },
+    {
+      "date": "2026-05-31",
+      "close": 462.07
+    },
+    {
+      "date": "2026-06-01",
+      "close": 462.3
+    },
+    {
+      "date": "2026-06-02",
+      "close": 462.53
+    },
+    {
+      "date": "2026-06-03",
+      "close": 462.76
+    },
+    {
+      "date": "2026-06-04",
+      "close": 462.99
+    },
+    {
+      "date": "2026-06-05",
+      "close": 463.22
+    },
+    {
+      "date": "2026-06-06",
+      "close": 463.45
+    },
+    {
+      "date": "2026-06-07",
+      "close": 463.68
+    },
+    {
+      "date": "2026-06-08",
+      "close": 463.91
+    },
+    {
+      "date": "2026-06-09",
+      "close": 464.14
+    },
+    {
+      "date": "2026-06-10",
+      "close": 464.37
+    },
+    {
+      "date": "2026-06-11",
+      "close": 464.6
+    },
+    {
+      "date": "2026-06-12",
+      "close": 464.83
+    },
+    {
+      "date": "2026-06-13",
+      "close": 465.06
+    },
+    {
+      "date": "2026-06-14",
+      "close": 465.29
+    },
+    {
+      "date": "2026-06-15",
+      "close": 465.52
+    },
+    {
+      "date": "2026-06-16",
+      "close": 465.75
+    },
+    {
+      "date": "2026-06-17",
+      "close": 465.98
+    },
+    {
+      "date": "2026-06-18",
+      "close": 466.21
+    },
+    {
+      "date": "2026-06-19",
+      "close": 466.44
+    },
+    {
+      "date": "2026-06-20",
+      "close": 466.67
+    }
+  ],
+  "placeholder": true
+}

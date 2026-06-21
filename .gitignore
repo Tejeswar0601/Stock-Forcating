@@ -1,0 +1,4 @@
+__pycache__/
+*.pyc
+*.keras
+.DS_Store
