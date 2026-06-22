@@ -1,44 +1,44 @@
 {
   "ticker": "AAPL",
-  "generated_at_utc": "2026-06-21T10:54:31.832279+00:00",
+  "generated_at_utc": "2026-06-22T05:43:43.067976+00:00",
   "last_known_date": "2026-06-18",
   "last_known_price": 298.01,
-  "test_mae_return": 0.04981,
+  "test_mae_return": 0.04984,
   "forecast": [
     {
       "date": "2026-06-19",
       "day": 1,
-      "predicted_price": 297.61,
-      "predicted_return_pct": -0.136,
-      "change_from_last_pct": -0.14
+      "predicted_price": 298.25,
+      "predicted_return_pct": 0.081,
+      "change_from_last_pct": 0.08
     },
     {
       "date": "2026-06-22",
       "day": 2,
-      "predicted_price": 297.66,
-      "predicted_return_pct": 0.019,
-      "change_from_last_pct": -0.12
+      "predicted_price": 298.36,
+      "predicted_return_pct": 0.037,
+      "change_from_last_pct": 0.12
     },
     {
       "date": "2026-06-23",
       "day": 3,
-      "predicted_price": 297.17,
-      "predicted_return_pct": -0.166,
-      "change_from_last_pct": -0.28
+      "predicted_price": 298.53,
+      "predicted_return_pct": 0.057,
+      "change_from_last_pct": 0.18
     },
     {
       "date": "2026-06-24",
       "day": 4,
-      "predicted_price": 297.31,
-      "predicted_return_pct": 0.049,
-      "change_from_last_pct": -0.23
+      "predicted_price": 298.59,
+      "predicted_return_pct": 0.019,
+      "change_from_last_pct": 0.19
     },
     {
       "date": "2026-06-25",
       "day": 5,
-      "predicted_price": 297.27,
-      "predicted_return_pct": -0.016,
-      "change_from_last_pct": -0.25
+      "predicted_price": 298.83,
+      "predicted_return_pct": 0.081,
+      "change_from_last_pct": 0.28
     }
   ],
   "recent_history": [
