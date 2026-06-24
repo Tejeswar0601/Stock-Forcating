@@ -1,51 +1,47 @@
 {
   "ticker": "MSFT",
-  "generated_at_utc": "2026-06-23T01:33:07.911134+00:00",
-  "last_known_date": "2026-06-22",
-  "last_known_price": 367.34,
-  "test_mae_return": 0.04071,
+  "generated_at_utc": "2026-06-24T01:25:51.628431+00:00",
+  "last_known_date": "2026-06-23",
+  "last_known_price": 373.94,
+  "test_mae_return": 0.04098,
   "forecast": [
     {
-      "date": "2026-06-23",
-      "day": 1,
-      "predicted_price": 366.68,
-      "predicted_return_pct": -0.179,
-      "change_from_last_pct": -0.18
-    },
-    {
       "date": "2026-06-24",
-      "day": 2,
-      "predicted_price": 366.27,
-      "predicted_return_pct": -0.112,
-      "change_from_last_pct": -0.29
+      "day": 1,
+      "predicted_price": 373.71,
+      "predicted_return_pct": -0.062,
+      "change_from_last_pct": -0.06
     },
     {
       "date": "2026-06-25",
-      "day": 3,
-      "predicted_price": 365.97,
-      "predicted_return_pct": -0.081,
-      "change_from_last_pct": -0.37
+      "day": 2,
+      "predicted_price": 373.16,
+      "predicted_return_pct": -0.148,
+      "change_from_last_pct": -0.21
     },
     {
       "date": "2026-06-26",
-      "day": 4,
-      "predicted_price": 365.66,
-      "predicted_return_pct": -0.085,
-      "change_from_last_pct": -0.46
+      "day": 3,
+      "predicted_price": 372.81,
+      "predicted_return_pct": -0.093,
+      "change_from_last_pct": -0.3
     },
     {
       "date": "2026-06-29",
+      "day": 4,
+      "predicted_price": 372.54,
+      "predicted_return_pct": -0.072,
+      "change_from_last_pct": -0.37
+    },
+    {
+      "date": "2026-06-30",
       "day": 5,
-      "predicted_price": 365.21,
+      "predicted_price": 372.09,
       "predicted_return_pct": -0.123,
-      "change_from_last_pct": -0.58
+      "change_from_last_pct": -0.5
     }
   ],
   "recent_history": [
-    {
-      "date": "2026-05-08",
-      "close": 414.22
-    },
     {
       "date": "2026-05-11",
       "close": 411.77
@@ -161,6 +157,10 @@
     {
       "date": "2026-06-22",
       "close": 367.34
+    },
+    {
+      "date": "2026-06-23",
+      "close": 373.94
     }
   ]
 }
