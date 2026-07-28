@@ -1,44 +1,44 @@
 {
   "ticker": "MSFT",
-  "generated_at_utc": "2026-07-25T01:02:54.119019+00:00",
-  "last_known_date": "2026-07-24",
-  "last_known_price": 381.7,
-  "test_mae_return": 0.04198,
+  "generated_at_utc": "2026-07-28T00:57:40.956537+00:00",
+  "last_known_date": "2026-07-27",
+  "last_known_price": 389.1,
+  "test_mae_return": 0.04236,
   "forecast": [
     {
-      "date": "2026-07-27",
-      "day": 1,
-      "predicted_price": 381.53,
-      "predicted_return_pct": -0.044,
-      "change_from_last_pct": -0.04
-    },
-    {
       "date": "2026-07-28",
-      "day": 2,
-      "predicted_price": 381.85,
-      "predicted_return_pct": 0.084,
-      "change_from_last_pct": 0.04
+      "day": 1,
+      "predicted_price": 388.8,
+      "predicted_return_pct": -0.076,
+      "change_from_last_pct": -0.08
     },
     {
       "date": "2026-07-29",
-      "day": 3,
-      "predicted_price": 381.94,
-      "predicted_return_pct": 0.023,
-      "change_from_last_pct": 0.06
+      "day": 2,
+      "predicted_price": 388.71,
+      "predicted_return_pct": -0.024,
+      "change_from_last_pct": -0.1
     },
     {
       "date": "2026-07-30",
-      "day": 4,
-      "predicted_price": 382.26,
-      "predicted_return_pct": 0.085,
-      "change_from_last_pct": 0.15
+      "day": 3,
+      "predicted_price": 388.58,
+      "predicted_return_pct": -0.034,
+      "change_from_last_pct": -0.13
     },
     {
       "date": "2026-07-31",
+      "day": 4,
+      "predicted_price": 388.45,
+      "predicted_return_pct": -0.032,
+      "change_from_last_pct": -0.17
+    },
+    {
+      "date": "2026-08-03",
       "day": 5,
-      "predicted_price": 382.22,
-      "predicted_return_pct": -0.011,
-      "change_from_last_pct": 0.14
+      "predicted_price": 388.6,
+      "predicted_return_pct": 0.039,
+      "change_from_last_pct": -0.13
     }
   ],
   "recent_history": [
@@ -159,8 +159,8 @@
       "close": 381.58
     },
     {
-      "date": "2026-07-24",
-      "close": 381.7
+      "date": "2026-07-27",
+      "close": 389.1
     }
   ]
 }

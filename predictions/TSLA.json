@@ -1,44 +1,44 @@
 {
   "ticker": "TSLA",
-  "generated_at_utc": "2026-07-25T01:01:23.121051+00:00",
-  "last_known_date": "2026-07-24",
-  "last_known_price": 313.03,
-  "test_mae_return": 0.06172,
+  "generated_at_utc": "2026-07-28T00:56:11.322098+00:00",
+  "last_known_date": "2026-07-27",
+  "last_known_price": 309.22,
+  "test_mae_return": 0.06177,
   "forecast": [
     {
-      "date": "2026-07-27",
-      "day": 1,
-      "predicted_price": 312.53,
-      "predicted_return_pct": -0.158,
-      "change_from_last_pct": -0.16
-    },
-    {
       "date": "2026-07-28",
-      "day": 2,
-      "predicted_price": 312.25,
-      "predicted_return_pct": -0.092,
-      "change_from_last_pct": -0.25
+      "day": 1,
+      "predicted_price": 308.57,
+      "predicted_return_pct": -0.212,
+      "change_from_last_pct": -0.21
     },
     {
       "date": "2026-07-29",
-      "day": 3,
-      "predicted_price": 312.52,
-      "predicted_return_pct": 0.089,
-      "change_from_last_pct": -0.16
+      "day": 2,
+      "predicted_price": 308.21,
+      "predicted_return_pct": -0.116,
+      "change_from_last_pct": -0.33
     },
     {
       "date": "2026-07-30",
-      "day": 4,
-      "predicted_price": 312.98,
-      "predicted_return_pct": 0.146,
-      "change_from_last_pct": -0.02
+      "day": 3,
+      "predicted_price": 307.31,
+      "predicted_return_pct": -0.29,
+      "change_from_last_pct": -0.62
     },
     {
       "date": "2026-07-31",
+      "day": 4,
+      "predicted_price": 306.79,
+      "predicted_return_pct": -0.17,
+      "change_from_last_pct": -0.79
+    },
+    {
+      "date": "2026-08-03",
       "day": 5,
-      "predicted_price": 312.39,
-      "predicted_return_pct": -0.188,
-      "change_from_last_pct": -0.2
+      "predicted_price": 306.0,
+      "predicted_return_pct": -0.258,
+      "change_from_last_pct": -1.04
     }
   ],
   "recent_history": [
@@ -159,8 +159,8 @@
       "close": 319.69
     },
     {
-      "date": "2026-07-24",
-      "close": 313.03
+      "date": "2026-07-27",
+      "close": 309.22
     }
   ]
 }
