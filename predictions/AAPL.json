@@ -1,51 +1,47 @@
 {
   "ticker": "AAPL",
-  "generated_at_utc": "2026-08-21T23:46:40.254427+00:00",
-  "last_known_date": "2026-08-20",
-  "last_known_price": 311.3,
-  "test_mae_return": 0.05085,
+  "generated_at_utc": "2026-08-24T23:45:01.363898+00:00",
+  "last_known_date": "2026-08-21",
+  "last_known_price": 309.35,
+  "test_mae_return": 0.05069,
   "forecast": [
     {
-      "date": "2026-08-21",
-      "day": 1,
-      "predicted_price": 311.1,
-      "predicted_return_pct": -0.064,
-      "change_from_last_pct": -0.06
-    },
-    {
       "date": "2026-08-24",
-      "day": 2,
-      "predicted_price": 311.44,
-      "predicted_return_pct": 0.108,
-      "change_from_last_pct": 0.04
+      "day": 1,
+      "predicted_price": 309.67,
+      "predicted_return_pct": 0.103,
+      "change_from_last_pct": 0.1
     },
     {
       "date": "2026-08-25",
-      "day": 3,
-      "predicted_price": 311.5,
-      "predicted_return_pct": 0.021,
-      "change_from_last_pct": 0.06
+      "day": 2,
+      "predicted_price": 309.76,
+      "predicted_return_pct": 0.029,
+      "change_from_last_pct": 0.13
     },
     {
       "date": "2026-08-26",
-      "day": 4,
-      "predicted_price": 311.49,
-      "predicted_return_pct": -0.004,
-      "change_from_last_pct": 0.06
+      "day": 3,
+      "predicted_price": 309.71,
+      "predicted_return_pct": -0.017,
+      "change_from_last_pct": 0.12
     },
     {
       "date": "2026-08-27",
+      "day": 4,
+      "predicted_price": 309.2,
+      "predicted_return_pct": -0.163,
+      "change_from_last_pct": -0.05
+    },
+    {
+      "date": "2026-08-28",
       "day": 5,
-      "predicted_price": 311.83,
-      "predicted_return_pct": 0.109,
-      "change_from_last_pct": 0.17
+      "predicted_price": 309.44,
+      "predicted_return_pct": 0.078,
+      "change_from_last_pct": 0.03
     }
   ],
   "recent_history": [
-    {
-      "date": "2026-07-10",
-      "close": 315.05
-    },
     {
       "date": "2026-07-13",
       "close": 317.04
@@ -161,6 +157,10 @@
     {
       "date": "2026-08-20",
       "close": 311.3
+    },
+    {
+      "date": "2026-08-21",
+      "close": 309.35
     }
   ]
 }
