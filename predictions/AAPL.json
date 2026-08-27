@@ -1,55 +1,47 @@
 {
   "ticker": "AAPL",
-  "generated_at_utc": "2026-08-25T23:47:42.270282+00:00",
-  "last_known_date": "2026-08-24",
-  "last_known_price": 310.34,
-  "test_mae_return": 0.05057,
+  "generated_at_utc": "2026-08-27T04:36:56.625516+00:00",
+  "last_known_date": "2026-08-26",
+  "last_known_price": 313.45,
+  "test_mae_return": 0.05063,
   "forecast": [
     {
-      "date": "2026-08-25",
-      "day": 1,
-      "predicted_price": 310.33,
-      "predicted_return_pct": -0.004,
-      "change_from_last_pct": -0.0
-    },
-    {
-      "date": "2026-08-26",
-      "day": 2,
-      "predicted_price": 310.28,
-      "predicted_return_pct": -0.016,
-      "change_from_last_pct": -0.02
-    },
-    {
       "date": "2026-08-27",
-      "day": 3,
-      "predicted_price": 310.84,
-      "predicted_return_pct": 0.181,
-      "change_from_last_pct": 0.16
+      "day": 1,
+      "predicted_price": 314.3,
+      "predicted_return_pct": 0.271,
+      "change_from_last_pct": 0.27
     },
     {
       "date": "2026-08-28",
-      "day": 4,
-      "predicted_price": 311.2,
-      "predicted_return_pct": 0.114,
-      "change_from_last_pct": 0.28
+      "day": 2,
+      "predicted_price": 314.08,
+      "predicted_return_pct": -0.069,
+      "change_from_last_pct": 0.2
     },
     {
       "date": "2026-08-31",
+      "day": 3,
+      "predicted_price": 313.68,
+      "predicted_return_pct": -0.13,
+      "change_from_last_pct": 0.07
+    },
+    {
+      "date": "2026-09-01",
+      "day": 4,
+      "predicted_price": 313.79,
+      "predicted_return_pct": 0.037,
+      "change_from_last_pct": 0.11
+    },
+    {
+      "date": "2026-09-02",
       "day": 5,
-      "predicted_price": 311.11,
-      "predicted_return_pct": -0.028,
-      "change_from_last_pct": 0.25
+      "predicted_price": 314.39,
+      "predicted_return_pct": 0.191,
+      "change_from_last_pct": 0.3
     }
   ],
   "recent_history": [
-    {
-      "date": "2026-07-14",
-      "close": 314.59
-    },
-    {
-      "date": "2026-07-15",
-      "close": 327.22
-    },
     {
       "date": "2026-07-16",
       "close": 332.97
@@ -161,6 +153,14 @@
     {
       "date": "2026-08-24",
       "close": 310.34
+    },
+    {
+      "date": "2026-08-25",
+      "close": 309.9
+    },
+    {
+      "date": "2026-08-26",
+      "close": 313.45
     }
   ]
 }
