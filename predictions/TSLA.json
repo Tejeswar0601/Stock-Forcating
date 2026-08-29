@@ -1,44 +1,44 @@
 {
   "ticker": "TSLA",
-  "generated_at_utc": "2026-08-28T07:00:32.549849+00:00",
+  "generated_at_utc": "2026-08-29T04:15:31.971721+00:00",
   "last_known_date": "2026-08-27",
   "last_known_price": 354.81,
-  "test_mae_return": 0.05951,
+  "test_mae_return": 0.05979,
   "forecast": [
     {
       "date": "2026-08-28",
       "day": 1,
-      "predicted_price": 354.96,
-      "predicted_return_pct": 0.041,
-      "change_from_last_pct": 0.04
+      "predicted_price": 354.86,
+      "predicted_return_pct": 0.013,
+      "change_from_last_pct": 0.01
     },
     {
       "date": "2026-08-31",
       "day": 2,
-      "predicted_price": 354.37,
-      "predicted_return_pct": -0.166,
-      "change_from_last_pct": -0.12
+      "predicted_price": 356.28,
+      "predicted_return_pct": 0.4,
+      "change_from_last_pct": 0.41
     },
     {
       "date": "2026-09-01",
       "day": 3,
-      "predicted_price": 353.8,
-      "predicted_return_pct": -0.16,
-      "change_from_last_pct": -0.28
+      "predicted_price": 356.44,
+      "predicted_return_pct": 0.046,
+      "change_from_last_pct": 0.46
     },
     {
       "date": "2026-09-02",
       "day": 4,
-      "predicted_price": 354.11,
-      "predicted_return_pct": 0.087,
-      "change_from_last_pct": -0.2
+      "predicted_price": 358.22,
+      "predicted_return_pct": 0.498,
+      "change_from_last_pct": 0.96
     },
     {
       "date": "2026-09-03",
       "day": 5,
-      "predicted_price": 354.36,
-      "predicted_return_pct": 0.073,
-      "change_from_last_pct": -0.13
+      "predicted_price": 360.55,
+      "predicted_return_pct": 0.65,
+      "change_from_last_pct": 1.62
     }
   ],
   "recent_history": [
