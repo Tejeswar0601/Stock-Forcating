@@ -1,44 +1,44 @@
 {
   "ticker": "MSFT",
-  "generated_at_utc": "2026-09-08T01:19:21.351019+00:00",
+  "generated_at_utc": "2026-09-09T01:22:57.848861+00:00",
   "last_known_date": "2026-09-04",
   "last_known_price": 499.7,
-  "test_mae_return": 0.04373,
+  "test_mae_return": 0.04507,
   "forecast": [
     {
       "date": "2026-09-07",
       "day": 1,
-      "predicted_price": 500.26,
-      "predicted_return_pct": 0.111,
-      "change_from_last_pct": 0.11
+      "predicted_price": 497.81,
+      "predicted_return_pct": -0.379,
+      "change_from_last_pct": -0.38
     },
     {
       "date": "2026-09-08",
       "day": 2,
-      "predicted_price": 500.09,
-      "predicted_return_pct": -0.034,
-      "change_from_last_pct": 0.08
+      "predicted_price": 494.43,
+      "predicted_return_pct": -0.677,
+      "change_from_last_pct": -1.05
     },
     {
       "date": "2026-09-09",
       "day": 3,
-      "predicted_price": 499.78,
-      "predicted_return_pct": -0.06,
-      "change_from_last_pct": 0.02
+      "predicted_price": 492.49,
+      "predicted_return_pct": -0.393,
+      "change_from_last_pct": -1.44
     },
     {
       "date": "2026-09-10",
       "day": 4,
-      "predicted_price": 499.5,
-      "predicted_return_pct": -0.057,
-      "change_from_last_pct": -0.04
+      "predicted_price": 490.56,
+      "predicted_return_pct": -0.392,
+      "change_from_last_pct": -1.83
     },
     {
       "date": "2026-09-11",
       "day": 5,
-      "predicted_price": 499.15,
-      "predicted_return_pct": -0.07,
-      "change_from_last_pct": -0.11
+      "predicted_price": 489.24,
+      "predicted_return_pct": -0.27,
+      "change_from_last_pct": -2.09
     }
   ],
   "recent_history": [
