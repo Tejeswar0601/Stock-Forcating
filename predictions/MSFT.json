@@ -1,51 +1,47 @@
 {
   "ticker": "MSFT",
-  "generated_at_utc": "2026-09-10T01:17:43.945605+00:00",
-  "last_known_date": "2026-09-08",
-  "last_known_price": 493.95,
-  "test_mae_return": 0.04425,
+  "generated_at_utc": "2026-09-11T01:19:41.741491+00:00",
+  "last_known_date": "2026-09-09",
+  "last_known_price": 491.65,
+  "test_mae_return": 0.04417,
   "forecast": [
     {
-      "date": "2026-09-09",
-      "day": 1,
-      "predicted_price": 494.27,
-      "predicted_return_pct": 0.066,
-      "change_from_last_pct": 0.07
-    },
-    {
       "date": "2026-09-10",
-      "day": 2,
-      "predicted_price": 493.47,
-      "predicted_return_pct": -0.162,
-      "change_from_last_pct": -0.1
+      "day": 1,
+      "predicted_price": 490.25,
+      "predicted_return_pct": -0.284,
+      "change_from_last_pct": -0.28
     },
     {
       "date": "2026-09-11",
-      "day": 3,
-      "predicted_price": 492.43,
-      "predicted_return_pct": -0.211,
-      "change_from_last_pct": -0.31
+      "day": 2,
+      "predicted_price": 488.44,
+      "predicted_return_pct": -0.371,
+      "change_from_last_pct": -0.65
     },
     {
       "date": "2026-09-14",
-      "day": 4,
-      "predicted_price": 492.15,
-      "predicted_return_pct": -0.058,
-      "change_from_last_pct": -0.37
+      "day": 3,
+      "predicted_price": 487.42,
+      "predicted_return_pct": -0.208,
+      "change_from_last_pct": -0.86
     },
     {
       "date": "2026-09-15",
+      "day": 4,
+      "predicted_price": 486.16,
+      "predicted_return_pct": -0.259,
+      "change_from_last_pct": -1.12
+    },
+    {
+      "date": "2026-09-16",
       "day": 5,
-      "predicted_price": 491.05,
-      "predicted_return_pct": -0.222,
-      "change_from_last_pct": -0.59
+      "predicted_price": 484.53,
+      "predicted_return_pct": -0.335,
+      "change_from_last_pct": -1.45
     }
   ],
   "recent_history": [
-    {
-      "date": "2026-07-28",
-      "close": 392.61
-    },
     {
       "date": "2026-07-29",
       "close": 389.81
@@ -161,6 +157,10 @@
     {
       "date": "2026-09-08",
       "close": 493.95
+    },
+    {
+      "date": "2026-09-09",
+      "close": 491.65
     }
   ]
 }
